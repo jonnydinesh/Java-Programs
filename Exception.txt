@@ -1,0 +1,46 @@
+package org.pro;
+
+public class InterviewPro {
+	void dateFormate(String s)
+	{
+		try 
+		{
+		String a = s.substring(0, 2);
+		String b = s.substring(3, 5);
+		String c = s.substring(6, 10);
+		int a1 = Integer.parseInt(a);
+		int b1 = Integer.parseInt(b);
+		int c1 = Integer.parseInt(c);
+		if((a1>0&&a1<=31)&&(b1>0&&b1<=12)&&(c1>1999))
+		{
+			System.out.println("valid");
+		}
+		else
+		{
+		  System.out.println("invalid");
+		}
+		
+		}
+		catch(StringIndexOutOfBoundsException e)
+		{
+			System.out.println("invalid");
+		}
+		catch(NumberFormatException e)
+		{
+			System.out.println("invalid");
+		}
+	}
+	public static void main(String[] args) 
+	{
+		InterviewPro dat=new InterviewPro();
+		dat.dateFormate("12/12/2020");
+		dat.dateFormate("10/25/2020");
+		dat.dateFormate("10/12/22");
+		dat.dateFormate("10-2/2023");
+		dat.dateFormate("xx/12/2020");
+		dat.dateFormate("29/02/1999");
+		
+	}
+
+}
+
