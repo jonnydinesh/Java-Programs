@@ -38,3 +38,4 @@ class Sum
 	}
 }
 
+Output: the result is : 3
